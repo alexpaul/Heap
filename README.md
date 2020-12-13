@@ -29,6 +29,60 @@ Heaps are implemented using arrays not pointers like in traditionaly binary tree
 | left child |  (index * 2) + 1 |
 | right child | (index * 2) + 2 |
 
+## Implementation of a `MinHeap` to test out retrieving nodes using fomular above 
+
+```swift 
+struct MinHeap {
+  private var elements = [2, 8, 21, 10, 16, 30, 36] //[Int]()
+  
+  public func getLeftChildIndex(_ parentIndex: Int) -> Int {
+    return (parentIndex * 2) + 1
+  }
+  
+  public func getRightChildIndex(_ parentIndex: Int) -> Int {
+    return (parentIndex * 2) + 2
+  }
+  
+  public func getParentIndex(_ childIndex: Int) -> Int {
+    return (childIndex - 2) / 2
+  }
+  
+  public func hasLeftChild(for index: Int) -> Bool {
+    return getLeftChildIndex(index) < elements.count
+  }
+  
+  public func hasRightChild(for index: Int) -> Bool {
+    return getRightChildIndex(index) < elements.count
+  }
+  
+  public func hasParent(_ childIndex: Int) -> Bool {
+    return getParentIndex(childIndex) >= 0
+  }
+  
+  public func leftChild(for index: Int) -> Int {
+    return elements[getLeftChildIndex(index)]
+  }
+  
+  public func rightChild(for index: Int) -> Int {
+    return elements[getRightChildIndex(index)]
+  }
+  
+  public func parent(for index: Int) -> Int {
+    return elements[getParentIndex(index)]
+  }
+}
+
+
+let heap = MinHeap()
+heap.getLeftChildIndex(2) // 5
+heap.getRightChildIndex(2) // 6
+
+heap.leftChild(for: 2) // 30
+heap.rightChild(for: 2) // 36
+
+heap.getParentIndex(0) // -1
+```
+
 ## Resources 
 
 1. [GeeksForGeeks - Heap Data Structure](https://www.geeksforgeeks.org/heap-data-structure/)
