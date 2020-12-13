@@ -10,9 +10,9 @@ Heaps are implemented using arrays not pointers like in traditionaly binary tree
 
 ## Objectives 
 
-* To create a heap from a given array, this is known as _Heapify_.
-* Be able to retrieve the minimum value in constant time. 
-* Understand what it is to shift up and shift down. 
+* Be able to insert values in a Heap. 
+* Be able to retrieve the minimum value from a Heap. 
+* Understand how to keep true to the heap property by using `shiftDown` or `shiftUp` heap functions. 
 
 ## Common functions 
 
