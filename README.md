@@ -93,6 +93,31 @@ heap.rightChild(for: 2) // 36
 heap.getParentIndex(0) // -1
 ```
 
+## `getMin` function to retrieve the minimum value in the `Heap`
+
+```swift 
+```
+
+## Insert 
+
+```swift 
+``` 
+
+## `shiftUp` function in order to swap nodes as needed when inserting
+
+```swift 
+```
+
+## `removeMin` function  
+
+```swift 
+``` 
+
+## `shiftDown` function in `heapify` back in place after removing a node
+
+```swift 
+```
+
 ## Resources 
 
 1. [GeeksForGeeks - Heap Data Structure](https://www.geeksforgeeks.org/heap-data-structure/)
