@@ -110,28 +110,30 @@ public func peek() -> Int? {
 ## Insert a value into the `Heap`
 
 ```swift 
-func mutating func insert(_ item: Int) {
-  elements.append(item)
-  shiftUp(elements.count - 1)
+// insert
+public mutating func insert(_ item: Int) {
+  nodes.append(item)
+  shiftUp(nodes.count - 1)
 }
 ``` 
 
 ## `shiftUp` function in order to swap nodes as needed when inserting
 
 ```swift 
-func mutating func shiftUp(_ index: Int) {
-  // code here
+// shift up
+public mutating func shiftUp(_ index: Int) {
+  let child = nodes[index]
+  var childIndex = index
+  var parentIndex = self.parentIndex(index)
+  // while the child is not the root and the child node is smaller than the parent, continue shifting up
+  while childIndex > 0 && orderCriteria(child, nodes[parentIndex]) {
+    nodes[childIndex] = nodes[parentIndex]
+    childIndex = parentIndex
+    parentIndex = self.parentIndex(childIndex)
+  }
+  // insert the new child
+  nodes[childIndex] = child
 }
-```
-
-## `removeMin` function  
-
-```swift 
-``` 
-
-## `shiftDown` function in `heapify` back in place after removing a node
-
-```swift 
 ```
 
 ## Resources 
