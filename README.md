@@ -93,19 +93,29 @@ heap.rightChild(for: 2) // 36
 heap.getParentIndex(0) // -1
 ```
 
-## `getMin` function to retrieve the minimum value in the `Heap`
+## Retrieve the minimum from the `Heap`
 
 ```swift 
+public func peek() -> Int? {
+  return elements.first
+}
 ```
 
-## Insert 
+## Insert a value into the `Heap`
 
 ```swift 
+func mutating func insert(_ item: Int) {
+  elements.append(item)
+  shiftUp(elements.count - 1)
+}
 ``` 
 
 ## `shiftUp` function in order to swap nodes as needed when inserting
 
 ```swift 
+func mutating func shiftUp(_ index: Int) {
+  // code here
+}
 ```
 
 ## `removeMin` function  
