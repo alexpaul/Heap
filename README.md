@@ -33,16 +33,6 @@ Heaps are implemented using arrays not pointers like in traditionaly binary tree
 
 ```swift 
 /*
-           2
-        /    \
-       8      21
-      / \    /  \
-    10  16  30   36
-*/
-```
-
-```swift 
-/*
           2
        /    \
       8      21
