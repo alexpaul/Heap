@@ -25,7 +25,7 @@ Heaps are implemented using arrays not pointers like in traditionaly binary tree
 
 | node | formula |
 |:----:|:----:|
-| parent | (index - 2) / 2 |
+| parent | (index - 1) / 2 |
 | left child |  (index * 2) + 1 |
 | right child | (index * 2) + 2 |
 
@@ -54,7 +54,7 @@ struct MinHeap {
   }
   
   public func getParentIndex(_ childIndex: Int) -> Int {
-    return (childIndex - 2) / 2
+    return (childIndex - 1) / 2
   }
   
   public func hasLeftChild(for index: Int) -> Bool {
