@@ -42,62 +42,78 @@ Heaps are implemented using arrays not pointers like in traditionaly binary tree
 ```
 
 ```swift 
-struct MinHeap {
-  private var elements = [2, 8, 21, 10, 16, 30, 36] //[Int]()
+/*
+          2
+       /    \
+      8      21
+     / \    /  \
+    10  16  30   36
+*/
+
+struct Heap {
+  // data structue to hold the nodes of the Heap is an array
+  private var nodes = [2, 8, 21, 10, 16, 30, 36]//[Int]()
   
-  public func getLeftChildIndex(_ parentIndex: Int) -> Int {
-    return (parentIndex * 2) + 1
+  // this Heap can be a min Heap or a max Heap so we will use a closure to determine Heap type
+  private var orderCriteria: (Int, Int) -> Bool
+  
+  // initializer
+  public init(sort: @escaping (Int, Int) -> (Bool)) {
+    self.orderCriteria = sort
   }
   
-  public func getRightChildIndex(_ parentIndex: Int) -> Int {
-    return (parentIndex * 2) + 2
+  // get left child index using formula => index * 2 + 1
+  public func leftChildIndex(_ index: Int) -> Int {
+    return index * 2 + 1
   }
   
-  public func getParentIndex(_ childIndex: Int) -> Int {
-    return (childIndex - 1) / 2
+  // get right child index using formula => index * 2 + 2
+  public func rightChildIndex(_ index: Int) -> Int {
+    return index * 2 + 2
   }
   
-  public func hasLeftChild(for index: Int) -> Bool {
-    return getLeftChildIndex(index) < elements.count
+  // get parent index using formula => (index - 1) / 2
+  public func parentIndex(_ index: Int) -> Int {
+    return (index - 1) / 2
   }
   
-  public func hasRightChild(for index: Int) -> Bool {
-    return getRightChildIndex(index) < elements.count
-  }
-  
-  public func hasParent(_ childIndex: Int) -> Bool {
-    return getParentIndex(childIndex) >= 0
-  }
-  
+  // get left child
   public func leftChild(for index: Int) -> Int {
-    return elements[getLeftChildIndex(index)]
+    return nodes[leftChildIndex(index)]
   }
   
+  // get right child
   public func rightChild(for index: Int) -> Int {
-    return elements[getRightChildIndex(index)]
+    return nodes[rightChildIndex(index)]
   }
   
+  // get parent
   public func parent(for index: Int) -> Int {
-    return elements[getParentIndex(index)]
+    return nodes[parentIndex(index)]
   }
 }
 
+/*
+          2
+       /    \
+      8      21
+     / \    /  \
+    10  16  30   36
+*/
 
-let heap = MinHeap()
-heap.getLeftChildIndex(2) // 5
-heap.getRightChildIndex(2) // 6
+let minHeap = Heap(sort: <) // min Heap
 
-heap.leftChild(for: 2) // 30
-heap.rightChild(for: 2) // 36
+minHeap.leftChildIndex(0) // 1
+minHeap.rightChildIndex(0) // 2
 
-heap.getParentIndex(0) // -1
+minHeap.parentIndex(6) // 2
 ```
 
 ## Retrieve the minimum from the `Heap`
 
 ```swift 
 public func peek() -> Int? {
-  return elements.first
+  return nodes.first
 }
 ```
 
