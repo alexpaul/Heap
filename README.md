@@ -1,6 +1,6 @@
 # Heap
 
-A heap is a tree data structure. Generally a heap is of two types, a min heap or a max heap. 
+A heap is a tree data structure. Generally a heap is of two types, a min heap or a max heap. Heaps work along with complete binary trees.
 
 ## Review of types of Binary Trees 
 
