@@ -109,6 +109,8 @@ public func peek() -> Int? {
 
 ## Insert a value into the `Heap`
 
+![sketch to insert into a heap](https://user-images.githubusercontent.com/1819208/102020380-e2fa6d80-3d46-11eb-8ea7-3097a3a1d512.jpg)
+
 ```swift 
 // insert
 public mutating func insert(_ item: Int) {
