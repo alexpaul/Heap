@@ -6,7 +6,7 @@ Heaps are implemented using arrays not pointers like in traditionaly binary tree
 
 ## Review of types of Binary Trees 
 
-![sketch of type of trees](https://user-images.githubusercontent.com/1819208/101498715-6e849080-393a-11eb-8978-92eae19e451d.jpg)
+![sketch of type of trees](https://user-images.githubusercontent.com/1819208/102018865-f48b4780-3d3d-11eb-99a5-a648873e4374.jpg)
 
 ## Objectives 
 
