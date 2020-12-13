@@ -21,6 +21,14 @@ Heaps are implemented using arrays not pointers like in traditionaly binary tree
 * Insert 
 * Heapify 
 
+## Formula for getting index position of any node 
+
+| node | formula |
+|:----:|:----:|
+| parent | (index - 2) / 2 |
+| left child |  (index * 2) + 1 |
+| right child | (index * 2) + 2 |
+
 ## Resources 
 
 1. [GeeksForGeeks - Heap Data Structure](https://www.geeksforgeeks.org/heap-data-structure/)
