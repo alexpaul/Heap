@@ -32,6 +32,16 @@ Heaps are implemented using arrays not pointers like in traditionaly binary tree
 ## Implementation of a `MinHeap` to test out retrieving nodes using fomular above 
 
 ```swift 
+/*
+           2
+        /    \
+       8      21
+      / \    /  \
+    10  16  30   36
+*/
+```
+
+```swift 
 struct MinHeap {
   private var elements = [2, 8, 21, 10, 16, 30, 36] //[Int]()
   
