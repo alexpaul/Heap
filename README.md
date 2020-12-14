@@ -18,6 +18,8 @@ Heaps are implemented using arrays not pointers like in traditionaly binary tree
 * Be able to remove the minimum element from a Heap. 
 * Be able to create a Heap from a given array. 
 
+[Heap Implementation](https://repl.it/@alexpaul/Heap#main.swift)
+
 ## Common functions 
 
 * Get min 
