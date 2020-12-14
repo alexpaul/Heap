@@ -146,4 +146,5 @@ public mutating func shiftUp(_ index: Int) {
 
 1. [GeeksForGeeks - Heap Data Structure](https://www.geeksforgeeks.org/heap-data-structure/)
 1. [Wikipedia - Heap Data Structure](https://en.wikipedia.org/wiki/Heap_(data_structure))
+1. [RW - Heap](https://github.com/raywenderlich/swift-algorithm-club/blob/master/Heap/Heap.swift)
 1. [Interview Cake - Heap Data Structure](https://www.interviewcake.com/concept/java/heap)
