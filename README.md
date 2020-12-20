@@ -171,22 +171,6 @@ public mutating func removeTop() -> Int? {
 ## `shiftDown` function needed to satisfy the `Heap property` when removing a node
 
 ```swift 
-public mutating func removeTop() -> Int? {
-  guard !nodes.isEmpty else { return nil }
-
-  if nodes.count == 1 {
-    return nodes.removeLast()
-  }
-
-  let value = nodes[0]
-
-  nodes[0] = nodes.removeLast() 
-
-  shiftDown(from: 0, to: nodes.count)
-
-  return value
-}
-
 private mutating func shiftDown(from index: Int, to endIndex: Int) {
   let leftChildIndex = self.leftChildIndex(index)
   let rightChildIndex = self.rightChildIndex(index)
