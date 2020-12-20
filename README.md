@@ -129,7 +129,7 @@ public mutating func insert(_ item: Int) {
 }
 ``` 
 
-## `shiftUp` function in order to swap nodes as needed when inserting
+## `shiftUp` function in order to swap nodes as needed when inserting and satisfying the `Heap Property`
 
 ```swift 
 // shift up
@@ -145,6 +145,70 @@ public mutating func shiftUp(_ index: Int) {
   }
   // insert the new child
   nodes[childIndex] = child
+}
+```
+
+## Remove the top value from a `Heap`
+
+```swift 
+public mutating func removeTop() -> Int? {
+  guard !nodes.isEmpty else { return nil }
+
+  if nodes.count == 1 {
+    return nodes.removeLast()
+  }
+
+  let value = nodes[0]
+
+  nodes[0] = nodes.removeLast() 
+
+  shiftDown(from: 0, to: nodes.count)
+
+  return value
+}
+```
+
+## `shiftDown` function needed to satisfy the `Heap property` when removing a node
+
+```swift 
+public mutating func removeTop() -> Int? {
+  guard !nodes.isEmpty else { return nil }
+
+  if nodes.count == 1 {
+    return nodes.removeLast()
+  }
+
+  let value = nodes[0]
+
+  nodes[0] = nodes.removeLast() 
+
+  shiftDown(from: 0, to: nodes.count)
+
+  return value
+}
+
+private mutating func shiftDown(from index: Int, to endIndex: Int) {
+  let leftChildIndex = self.leftChildIndex(index)
+  let rightChildIndex = self.rightChildIndex(index)
+
+  var currentIndex = index 
+
+  if leftChildIndex < endIndex && nodes[leftChildIndex] < nodes[currentIndex] {
+    currentIndex = leftChildIndex
+  }
+
+  if rightChildIndex < endIndex && nodes[rightChildIndex] < nodes[currentIndex] {
+    currentIndex = rightChildIndex
+  }
+
+  if currentIndex == index { // no swapping needed
+    return 
+  }
+
+  nodes.swapAt(currentIndex, index)
+
+  shiftDown(from: currentIndex, to: endIndex)
+
 }
 ```
 
