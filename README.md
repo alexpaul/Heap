@@ -14,13 +14,13 @@ Heaps are implemented using arrays not pointers like in traditionaly binary tree
 
 ## Objectives 
 
-* Understand the Heap Data Structure and its implementation. 
-* Know the formula to retrieve the given parent, left child or right child. 
-* Be able to retrieve the minimum value from a Heap. 
-* Be able to insert values in a Heap. 
-* Understand how we keep the _Heap Property_ satisfied using `shiftDown` or `shiftUp` Heap functions. 
-* Be able to remove the minimum element from a Heap. 
-* Be able to create a Heap from a given array. 
+[x] Understand the Heap Data Structure and its implementation. 
+[ ] Know the formula to retrieve the given parent, left child or right child. 
+[ ] Be able to retrieve the minimum value from a Heap. 
+[ ] Be able to insert values in a Heap. 
+[ ] Understand how we keep the _Heap Property_ satisfied using `shiftDown` or `shiftUp` Heap functions. 
+[ ] Be able to remove the minimum element from a Heap. 
+[ ] Be able to create a Heap from a given array. 
 
 [Heap Implementation](https://repl.it/@alexpaul/Heap#main.swift)
 
