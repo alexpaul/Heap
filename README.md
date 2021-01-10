@@ -150,6 +150,8 @@ public mutating func shiftUp(_ index: Int) {
 
 ## Remove the top value from a `Heap`
 
+![sketch - remove top](https://user-images.githubusercontent.com/1819208/104138866-37f4c800-5375-11eb-971b-8ea30953c960.jpg)
+
 ```swift 
 public mutating func removeTop() -> Int? {
   guard !nodes.isEmpty else { return nil }
