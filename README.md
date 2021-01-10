@@ -5,7 +5,7 @@ A heap is a tree data structure. Generally a heap is of two types, a min heap or
 Heaps are implemented using arrays not pointers like in traditionaly binary trees.
 
 #### Some use cases 
-* Priority Queues - a Heap ordered by priority (highest priority will be a the top of the heap) 
+* Priority Queues - a Heap ordered by priority (highest priority will be at the top of the heap) 
 * Sorting algorithms
 
 ## Review of types of Binary Trees 
