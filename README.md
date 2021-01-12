@@ -206,3 +206,4 @@ private mutating func shiftDown(from index: Int, to endIndex: Int) {
 1. [Interview Cake - Heap Data Structure](https://www.interviewcake.com/concept/java/heap)
 1. [Uses of Hepas](https://webdocs.cs.ualberta.ca/~holte/T26/heap-uses.html)
 1. [Video - HackerRank](https://www.youtube.com/watch?v=t0Cq6tVNRBA)
+1. [Swift.org - Where is a default PriorityQueue? - Adding more data structures to the stnadard library](https://forums.swift.org/t/adding-more-data-structures-to-the-standard-library/23651)
