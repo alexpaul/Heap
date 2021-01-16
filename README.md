@@ -200,18 +200,24 @@ private mutating func shiftDown(from index: Int, to endIndex: Int) {
 
 ## Challenge 
 
+> Languages like C++ have built-in PriorityQueues (Reminder: a Heap can be used as a PriorityQueue, minHeap or maxHeap as needed), for this LeetCode challenge use our Heap implementation to solve this challenge [Heap Implementation](https://repl.it/@alexpaul/Heap#main.swift).
+
 Design a class to find the kth largest element in a stream. Note that it is the kth largest element in the sorted order, not the kth distinct element.
 
 ```swift 
+struct Heap {
+  // implementation from in class implementation https://repl.it/@alexpaul/Heap#main.swift
+}
+
 class KthLargest {
 
-    init(_ k: Int, _ nums: [Int]) {
-        
-    }
-    
-    func add(_ val: Int) -> Int {
-        
-    }
+  init(_ k: Int, _ nums: [Int]) {
+    // code here
+  }
+
+  func add(_ val: Int) -> Int {
+    // code here
+  }
 }
 
 /**
