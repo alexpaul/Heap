@@ -210,6 +210,7 @@ struct Heap {
 }
 
 class KthLargest {
+  // decalare an instance of the Heap data structure here 
 
   init(_ k: Int, _ nums: [Int]) {
     // code here
