@@ -231,6 +231,8 @@ class KthLargest {
 [LeetCode - 703. Kth Largest Element in a Stream
 ](https://leetcode.com/problems/kth-largest-element-in-a-stream/)
 
+[Solution using our built Heap](https://repl.it/@alexpaul/Kth-Largest-Element-in-a-Stream#main.swift)
+
 ## Resources 
 
 1. [GeeksForGeeks - Heap Data Structure](https://www.geeksforgeeks.org/heap-data-structure/)
