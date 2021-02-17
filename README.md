@@ -179,11 +179,11 @@ private mutating func shiftDown(from index: Int, to endIndex: Int) {
 
   var currentIndex = index 
 
-  if leftChildIndex < endIndex && nodes[leftChildIndex] < nodes[currentIndex] {
+  if leftChildIndex < endIndex && orderingCriteria(nodes[leftChildIndex], nodes[currentIndex] {
     currentIndex = leftChildIndex
   }
 
-  if rightChildIndex < endIndex && nodes[rightChildIndex] < nodes[currentIndex] {
+  if rightChildIndex < endIndex && orderingCriteria(nodes[rightChildIndex], nodes[currentIndex] {
     currentIndex = rightChildIndex
   }
 
